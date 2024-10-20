@@ -1,0 +1,140 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registro">
+
+    <!-- Título del pedido -->
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pedido"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Icono y Nombre del Cliente -->
+    <ImageView
+        android:id="@+id/iconNombreCliente"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="Icono Nombre Cliente"
+        android:src="@drawable/ic_nombre_cliente"
+        app:layout_constraintTop_toBottomOf="@id/tvTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tvNombreCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre Cliente"
+        app:layout_constraintTop_toTopOf="@id/iconNombreCliente"
+        app:layout_constraintStart_toEndOf="@id/iconNombreCliente"
+        android:layout_marginStart="16dp" />
+
+    <!-- Icono y Número del Cliente -->
+    <ImageView
+        android:id="@+id/iconNumeroCliente"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="Icono Número Cliente"
+        android:src="@drawable/ic_numero_cliente"
+        app:layout_constraintTop_toBottomOf="@id/iconNombreCliente"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tvNumeroCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Número Cliente"
+        app:layout_constraintTop_toTopOf="@id/iconNumeroCliente"
+        app:layout_constraintStart_toEndOf="@id/iconNumeroCliente"
+        android:layout_marginStart="16dp" />
+
+    <!-- Icono y Productos -->
+    <ImageView
+        android:id="@+id/iconProductos"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="Icono Productos"
+        android:src="@drawable/ic_productos"
+        app:layout_constraintTop_toBottomOf="@id/iconNumeroCliente"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tvProductos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Productos"
+        app:layout_constraintTop_toTopOf="@id/iconProductos"
+        app:layout_constraintStart_toEndOf="@id/iconProductos"
+        android:layout_marginStart="16dp" />
+
+    <!-- Icono y Ubicación -->
+    <ImageView
+        android:id="@+id/iconUbicacion"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="Icono Ubicación"
+        android:src="@drawable/ic_ubicacion"
+        app:layout_constraintTop_toBottomOf="@id/iconProductos"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tvUbicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ubicación"
+        app:layout_constraintTop_toTopOf="@id/iconUbicacion"
+        app:layout_constraintStart_toEndOf="@id/iconUbicacion"
+        android:layout_marginStart="16dp" />
+
+    <!-- Iconos de Llamar, WhatsApp y Maps -->
+    <ImageView
+        android:id="@+id/iconLlamar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="Icono Llamar"
+        android:src="@drawable/ic_llamar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iconWhatsApp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="16dp" />
+
+    <ImageView
+        android:id="@+id/iconWhatsApp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="Icono WhatsApp"
+        android:src="@drawable/ic_whatsapp"
+        app:layout_constraintStart_toEndOf="@id/iconLlamar"
+        app:layout_constraintEnd_toStartOf="@id/iconMaps"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="16dp" />
+
+    <ImageView
+        android:id="@+id/iconMaps"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="Icono Maps"
+        android:src="@drawable/ic_maps"
+        app:layout_constraintStart_toEndOf="@id/iconWhatsApp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
